@@ -1,0 +1,11 @@
+class Poli {
+  String? id;
+  String namaPoli;
+
+  Poli({this.id, required this.namaPoli});
+
+  Map<String, dynamic> toJson() => {"nama_poli": namaPoli};
+
+  factory Poli.fromJson(Map<String, dynamic> json) =>
+      Poli(id: json['id'], namaPoli: json['nama_poli']);
+}
